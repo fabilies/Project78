@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Page3">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" >
+
+            <StackLayout Padding="10">
+                <StackLayout Orientation="Horizontal" Padding="15,0,0,0">
+                    <Label Text="WiFi Tracking" FontSize="Medium" TextColor="Black" />
+                    <Label Text="{Binding IsToggled, Source={x:Reference switch}}" 
+                           TextColor="Black" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                    <Switch x:Name="switch" VerticalOptions="Start"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Bluetooth Tracking" FontSize="Medium" TextColor="Black" />
+                    <Label Text="{Binding IsToggled, Source={x:Reference switch2}}" 
+                           TextColor="Black" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                    <Switch x:Name="switch2" VerticalOptions="Start"/>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

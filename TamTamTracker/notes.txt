@@ -1,0 +1,22 @@
+   //string test = a.GetSuggestions("http://localhost:50798/api/suggestions/getSuggestion").Result;
+            // LOCALHOST fix 
+            // CMD  netsh advfirewall firewall add rule name="IISExpress visualstudio app" protocol=tcp localport=50798 dir=in action=allow
+            // Configuration file toevoegen in Jexus
+            // PC IP + PORT NR
+
+			//        public static  async Task<string> GetSuggestions()
+        {
+            string url = "10.0.2.2:50798/api/suggestions/getSuggestion";
+            string result = "";
+            HttpClient client = new HttpClient();
+          
+                     
+            var response = await client.GetAsync(url);
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                result = JsonConvert.DeserializeObject<string>(content);
+            }
+            return result;
+
+         }

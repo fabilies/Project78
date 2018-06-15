@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Klik hieronder als u een lunch suggestie wilt ontvangen"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Get Lunch Suggestion" FontSize="12" HeightRequest="45" IsVisible="True" HorizontalOptions="Center"/>
+            <Image Source="loading.gif" Aspect="Fill" IsVisible="True"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
